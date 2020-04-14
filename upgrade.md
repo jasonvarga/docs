@@ -408,6 +408,14 @@ The `action` helper and `URL::action` method are also affected by this change:
 
 The form request's `validationData` method was changed from `protected` to `public`. If you are overriding this method in your implementation, you should update the visibility to `public`.
 
+### Authentication
+
+#### The `TokenRepositoryInterface`
+
+**Likelihood Of Impact: Low**
+
+A `recentlyCreatedToken` method has been added to the `Illuminate\Auth\Passwords\TokenRepositoryInterface` interface. If you are writing a custom implementation of this interface, you should add this method to your implementation.
+
 <a name="miscellaneous"></a>
 ### Miscellaneous
 
